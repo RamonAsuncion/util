@@ -12,6 +12,9 @@
 // determine the length of a compile-time known array.
 #define ARR_LEN(_arr) (sizeof(_arr) / sizeof((_arr)[0]))
 
+// calculate the size of some structure member
+#define FIELD_SIZEOF(_t, _f) (sizeof(((_t*)0)->_f))
+
 // basic Types
 typedef float     f32;
 typedef double    f64;
